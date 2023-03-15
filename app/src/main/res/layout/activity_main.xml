@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/currency_conversor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.231" />
+
+    <EditText
+        android:id="@+id/valueET"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="336dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginBottom="57dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/enter_the_amount_in_metical"
+        android:inputType="number|text"
+        app:layout_constraintBottom_toTopOf="@+id/ConvertBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="VisualLintTextFieldSize" />
+
+    <Button
+        android:id="@+id/ConvertBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="47dp"
+        android:onClick="Convert"
+        android:text="@string/convert"
+        app:layout_constraintBottom_toTopOf="@+id/currencyTV"
+        app:layout_constraintEnd_toEndOf="@+id/valueET"
+        app:layout_constraintStart_toStartOf="@+id/valueET"
+        app:layout_constraintTop_toBottomOf="@+id/valueET" />
+
+    <TextView
+        android:id="@+id/currencyTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="180dp"
+        android:text="@string/currency"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/ConvertBtn"
+        app:layout_constraintTop_toBottomOf="@+id/ConvertBtn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
