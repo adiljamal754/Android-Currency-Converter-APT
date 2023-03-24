@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">CurrencyConversorAPT</string>
+    <string name="app_name">Currency</string>
     <string name="currency_conversor">Currency Conversor</string>
-    <string name="currency">Currency</string>
+    <string name="currency">Convert from</string>
     <string name="convert">Convert</string>
     <string name="enter_the_amount_in_metical">Enter the amount in metical</string>
 </resources>

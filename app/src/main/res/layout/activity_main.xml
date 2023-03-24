@@ -6,57 +6,110 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/currency_conversor"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.231" />
-
-    <EditText
-        android:id="@+id/valueET"
+    <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="336dp"
-        android:layout_marginEnd="68dp"
-        android:layout_marginBottom="57dp"
-        android:autofillHints=""
-        android:ems="10"
-        android:hint="@string/enter_the_amount_in_metical"
-        android:inputType="number|text"
-        app:layout_constraintBottom_toTopOf="@+id/ConvertBtn"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="VisualLintTextFieldSize" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <Button
-        android:id="@+id/ConvertBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="47dp"
-        android:onClick="Convert"
-        android:text="@string/convert"
-        app:layout_constraintBottom_toTopOf="@+id/currencyTV"
-        app:layout_constraintEnd_toEndOf="@+id/valueET"
-        app:layout_constraintStart_toStartOf="@+id/valueET"
-        app:layout_constraintTop_toBottomOf="@+id/valueET" />
 
-    <TextView
-        android:id="@+id/currencyTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginBottom="180dp"
-        android:text="@string/currency"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/ConvertBtn"
-        app:layout_constraintTop_toBottomOf="@+id/ConvertBtn" />
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="120dp" />
 
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/currency"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="20sp"
+            android:textStyle="bold|italic" />
+
+        <LinearLayout
+            android:id="@+id/linearLayouH1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/currencySpinner"
+                android:layout_width="215dp"
+                android:layout_height="match_parent" />
+
+            <EditText
+                android:id="@+id/convertET"
+                style="@style/Widget.Material3.TextInputEditText.FilledBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:fontFamily="serif"
+                android:hint="Introduz o numero que deseja convert"
+                android:inputType="number|text"
+                android:selectAllOnFocus="true"
+                android:singleLine="false"
+                android:text="8075"
+                android:textAlignment="viewEnd"
+                android:textAllCaps="false"
+                android:textSize="24sp"
+                android:typeface="normal" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="to"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="20sp"
+            android:textStyle="bold|italic" />
+
+        <LinearLayout
+            android:id="@+id/linearLayoutH2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/currencySpinner2"
+                android:layout_width="215dp"
+                android:layout_height="match_parent" />
+
+            <EditText
+                android:id="@+id/convertedET"
+                style="@style/Widget.Material3.TextInputEditText.FilledBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:editable="false"
+                android:ems="10"
+                android:fontFamily="serif"
+                android:inputType="number|text"
+                android:selectAllOnFocus="true"
+                android:singleLine="false"
+                android:textAlignment="viewEnd"
+                android:textAllCaps="false"
+                android:textSize="24sp"
+                android:typeface="normal" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Button" />
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
