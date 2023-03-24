@@ -13,8 +13,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+    initialize();
+
     }
 
 
+    private void initialize(){
+        Integer[] images = {
+                R.drawable.usd,  R.drawable.euro,  R.drawable.gbp,  R.drawable.rub
+
+        };
+        ImageArrayAdapter adapter = new ImageArrayAdapter(this, images);
+        binding.currencySpinner.setAdapter(adapter);
+        binding.currencySpinner2.setAdapter(adapter);
+    }
 
 }

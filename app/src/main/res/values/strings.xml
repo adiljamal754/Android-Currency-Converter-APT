@@ -4,4 +4,8 @@
     <string name="currency">Convert from</string>
     <string name="convert">Convert</string>
     <string name="enter_the_amount_in_metical">Enter the amount in metical</string>
+    <string name="currencyImg">currencyImg</string>
+    <string name="introduz_o_numero_que_deseja_convert">Introduz o numero que deseja convert</string>
+    <string name="_8075">8075</string>
+    <string name="to">to</string>
 </resources>

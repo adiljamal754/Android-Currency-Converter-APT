@@ -44,8 +44,10 @@
 
             <Spinner
                 android:id="@+id/currencySpinner"
-                android:layout_width="215dp"
-                android:layout_height="match_parent" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                tools:ignore="DuplicateSpeakableTextCheck" />
 
             <EditText
                 android:id="@+id/convertET"
@@ -54,22 +56,23 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:fontFamily="serif"
-                android:hint="Introduz o numero que deseja convert"
+                android:hint="@string/introduz_o_numero_que_deseja_convert"
                 android:inputType="number|text"
                 android:selectAllOnFocus="true"
                 android:singleLine="false"
-                android:text="8075"
+                android:text="@string/_8075"
                 android:textAlignment="viewEnd"
                 android:textAllCaps="false"
                 android:textSize="24sp"
-                android:typeface="normal" />
+                android:typeface="normal"
+                android:autofillHints="" />
         </LinearLayout>
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="to"
+            android:text="@string/to"
             android:textAlignment="center"
             android:textAllCaps="true"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -84,16 +87,16 @@
 
             <Spinner
                 android:id="@+id/currencySpinner2"
-                android:layout_width="215dp"
-                android:layout_height="match_parent" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name" />
 
             <EditText
                 android:id="@+id/convertedET"
                 style="@style/Widget.Material3.TextInputEditText.FilledBox.Dense"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:editable="false"
                 android:ems="10"
                 android:fontFamily="serif"
                 android:inputType="number|text"
@@ -102,14 +105,16 @@
                 android:textAlignment="viewEnd"
                 android:textAllCaps="false"
                 android:textSize="24sp"
-                android:typeface="normal" />
+                android:typeface="normal"
+                tools:ignore="SpeakableTextPresentCheck"
+                android:autofillHints="" />
         </LinearLayout>
 
         <Button
             android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="@string/convert" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
