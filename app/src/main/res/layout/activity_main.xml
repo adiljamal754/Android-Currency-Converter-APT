@@ -96,7 +96,9 @@
                 android:id="@+id/convertedET"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:textAlignment="viewEnd" />
+                android:fontFamily="serif"
+                android:textAlignment="viewEnd"
+                android:textSize="24sp" />
 
         </LinearLayout>
 
